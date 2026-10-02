@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,18 @@
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
     "tailwindcss": "^3.4.12"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{html,css,json,md}": [
+      "prettier --write"
+    ]
   }
 }
