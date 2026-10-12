@@ -8,7 +8,7 @@ describe("getUsername", () => {
 
   it("returns the name from the user object in storage", () => {
     // Arrange: Set up the test data
-    const user = { name: "John" };
+    const user = { data: { name: "John" } };
     saveUser(user);
 
     // Act: Call the function being tested
