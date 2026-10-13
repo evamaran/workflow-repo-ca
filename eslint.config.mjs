@@ -11,7 +11,7 @@ export default defineConfig([
 		languageOptions: { globals: globals.browser },
 	},
 	{
-		files: ["tailwind.config.js", "playwright.config.js"],
+		files: ["tailwind.config.js", "playwright.config.js", "tests/**/*.js"],
 		languageOptions: { globals: globals.node },
 	},
 	{
